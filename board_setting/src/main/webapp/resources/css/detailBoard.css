@@ -1,0 +1,21 @@
+h1 {
+	padding-left : 140px;
+}
+
+#detailTable {
+	margin-left : 140px;
+	height : 30%;
+}
+
+#detailTable th {
+	width : 60%;
+}
+
+#contentDiv {
+	margin-left : 140px;
+	width : 70%;
+}
+
+#detailBtn {
+	margin-left : 140px;
+}

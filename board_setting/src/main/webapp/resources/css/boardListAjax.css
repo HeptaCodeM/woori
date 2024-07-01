@@ -1,0 +1,59 @@
+h1 {
+	padding-left : 140px;
+}
+
+#boardListTable {
+	width : 80%;
+	margin-left : 130px;
+	margin-top : 30px;
+}
+
+#writeBtn {
+	margin-left : 130px;
+}
+
+#titleTable {
+	width : 40%;
+}
+
+#writerTable {
+	width : 15%;
+}
+
+#timeTable {
+	width : 20%;
+}
+
+#titleForm {
+	width : 80%;
+	margin-left : 130px;
+}
+
+#writerForm {
+	width : 80%;
+	margin-left : 130px;
+}
+
+#contentForm {
+	width : 80%;
+	margin-left : 130px;
+}
+
+#detailTable {
+	margin-left : 130px;
+	height : 30%;
+}
+
+#detailTable th {
+	width : 60%;
+}
+
+#contentDiv {
+	margin-left : 140px;
+	width : 70%;
+}
+
+#divNum, #divTitle, #divWritter, #divContent {
+	font-weight: bold;
+}
+

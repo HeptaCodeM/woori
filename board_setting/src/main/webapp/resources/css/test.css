@@ -1,0 +1,34 @@
+#test{
+	display: flex;
+}
+
+#test1 {
+	width: 30%;
+}
+
+#test2 {
+	width: 30%;
+}
+
+#numDiv {
+	font-size: 20px;
+}
+
+#test3 {
+	width: 30%;
+	height: 70%;
+}
+
+#inputNum {
+	width: 20%;
+}
+
+#numberTable {
+	width: 60%;
+	height: 70%;
+	text-align: center;
+}
+
+#showNum {
+	height: 100%;
+}

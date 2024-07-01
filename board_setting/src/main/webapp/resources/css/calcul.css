@@ -1,0 +1,77 @@
+h1 {
+	padding-left : 140px;
+}
+
+#calcul {
+	margin-left : 130px;
+}
+
+#display {
+	width: 80%;
+	height: 5%;
+	font-size: 18px;
+	text-align: right;
+}
+
+.numBtn {
+	width: 19.8%;
+	height: 6%;
+	text-align: left;
+	background-color: white;
+	border-width: thin;
+}
+.numBtn:active {
+	width: 19.8%;
+	height: 6%;
+	text-align: left;
+	background-color: gray;
+	border-width: thin;
+}
+
+.operator {
+	width: 19.8%;
+	height: 6%;
+	text-align: left;
+	background-color: white;
+	border-width: thin;
+}
+
+.operator:active  {
+	width: 19.8%;
+	height: 6%;
+	text-align: left;
+	background-color: gray;
+	border-width: thin;
+}
+
+.delete {
+	width: 19.8%;
+	height: 6%;
+	text-align: left;
+	background-color: white;
+	border-width: thin;
+}
+
+.delete:active {
+	width: 19.8%;
+	height: 6%;
+	text-align: left;
+	background-color: gray;
+	border-width: thin;
+}
+
+#resultBtn {
+	width: 19.8%;
+	height: 6%;
+	text-align: left;
+	background-color: white;
+	border-width: thin;
+}
+
+#resultBtn:active {
+	width: 19.8%;
+	height: 6%;
+	text-align: left;
+	background-color: gray;
+	border-width: thin;
+}

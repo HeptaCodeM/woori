@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="calendarMapper">
+	<!-- 스케줄 상세 조회 -->
+	<select id="detailCalendar" resultType="CalendarVo">
+		SELECT  CAL_NO,
+				CAL_YEAR,
+				CAL_MONTH,
+				CAL_DAY,
+				CAL_TIME,
+				CAL_REQ,
+				CAL_DATE,
+				CAL_CONTENTS
+		FROM CAL_SHEDULE
+		WHERE CAL_YEAR = #{calYear}
+		AND CAL_MONTH = #{calMonth}
+		AND CAL_DAY = #{calDay}
+	</select>
+	
+	<!-- 스케줄 작성 -->
+	<insert id="insertCalendar" parameterType="CalendarVo">
+		<selectKey keyProperty="calNo" resultType="int" order="BEFORE">
+			SELECT CAL_NO_SEQ.NEXTVAL FROM DUAL
+		</selectKey>
+		INSERT INTO CAL_SHEDULE (
+								 CAL_NO,
+								 CAL_YEAR,
+								 CAL_MONTH,
+								 CAL_DAY,
+								 CAL_TIME,
+								 CAL_REQ,
+								 CAL_DATE,
+								 CAL_CONTENTS
+								 )
+		VALUES (
+				#{calNo},
+				#{calYear},
+				#{calMonth},
+				#{calDay},
+				#{calTime},
+				#{calReq},
+				#{calDate, jdbcType=DATE},
+				#{calContents}
+				)
+	</insert>
+	
+	<!-- 스케줄 삭제 -->
+	<delete id="deleteCalendar" parameterType="int">
+		DELETE FROM CAL_SHEDULE
+		WHERE CAL_NO = #{calNo}
+	</delete>
+	
+	<select id="allSchedule" resultType="CalendarVo">
+		SELECT  CAL_NO,
+				CAL_YEAR,
+				CAL_MONTH,
+				CAL_DAY,
+				CAL_TIME,
+				CAL_REQ,
+				CAL_DATE,
+				CAL_CONTENTS
+		FROM CAL_SHEDULE
+	</select>
+	
+	
+</mapper>

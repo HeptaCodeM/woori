@@ -1,0 +1,181 @@
+#yearTitle {
+	text-align: center;
+}
+
+.calHeaderMonth {
+	display: flex;
+	justify-content: center;
+}
+
+.calMain {
+	display: flex;
+	flex-direction: column;
+	width: 80%;
+	padding-left: 20%;
+}
+
+.calMainDay {
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	text-align: center;
+	font-weight: bold;
+}
+
+.calDate {
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+}
+
+#monthLeft {
+	padding-right: 30px;
+	font-size: 30px;
+	cursor: pointer;
+}
+
+#monthRight {
+	padding-left: 30px;
+	font-size: 30px;
+	cursor: pointer;
+}
+
+#monthTitle {
+	font-size: 30px;
+}
+
+#yearTitle {
+	font-size: 30px;
+}
+
+.date, .dateEmpty {
+	display: inline-block;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	border-left: 0px;
+	border-right: 0px;
+}
+
+.date {
+	cursor: pointer;
+}
+
+.saturday {
+	background-color: #DBDBFF; 
+}
+
+.sunday {
+	background-color: #FFD1D1;
+}
+
+.date:nth-child(-n+7), .dateEmpty:nth-child(-n+7){
+	background-color: #F9F9F9;
+}
+
+.date:nth-child(n+15):nth-child(-n+21){
+	background-color: #F9F9F9;
+}
+
+.date:nth-child(n+29):nth-child(-n+35), .dateEmpty:nth-child(n+29):nth-child(-n+35){
+	background-color: #F9F9F9;
+}
+
+.date:nth-child(-n+7).saturday{
+	background-color: #DBDBFF;
+}
+
+.date:nth-child(-n+7).sunday{
+	background-color: #FFD1D1;
+}
+
+.date:nth-child(n+15):nth-child(-n+21).saturday{
+	background-color: #DBDBFF;
+}
+
+.date:nth-child(n+15):nth-child(-n+21).sunday{
+	background-color: #FFD1D1;
+}
+
+.date:nth-child(n+29):nth-child(-n+35).saturday{
+	background-color: #DBDBFF;
+}
+
+.date:nth-child(n+29):nth-child(-n+35).sunday{
+	background-color: #FFD1D1;
+}
+
+.modal.in .modal-dialog {
+	z-index: 10000;
+}
+
+.modal-content {
+	width: 100%;
+	height: 80%;
+}
+
+.modal-body {
+	height: 400px;
+}
+
+#timeTr {
+	width: 13%;
+	height: 35px;
+	text-align: center;
+}
+
+#contentTr {
+	width: 69%;
+	height: 35px;
+}
+
+#reqTr {
+	width: 12.3%;
+	height: 35px;
+}
+
+#deleteTr {
+	width: 10%;
+	height: 35px;
+	text-align: center;
+}
+
+#deleteTable {
+	text-align: center;
+	cursor: pointer;
+}
+
+#scheduleTable {
+	height: 35px;
+}
+
+#topTable {
+	border-bottom: 1px solid gray;
+	height: 35px;
+}
+
+#timeTable {
+	text-align: center;
+}
+
+#textInput {
+	height: 40px;
+	width: 100%;
+}
+
+#checkboxContainer {
+	display: flex;
+}
+
+#checkboxNotice {
+	padding-top: 15px;
+	padding-left: 5px;
+}
+
+#modalCalNo {
+	display: none;
+}
+
+.date.has-schedule {
+	background-color: #96CB96 !important;
+}

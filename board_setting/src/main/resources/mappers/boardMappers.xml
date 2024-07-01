@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="boardMapper">
+	<!-- 게시판 조회 -->
+	<select id="test" resultType="testVo">
+		SELECT  BOARDNO, 
+				TITLE, 
+				WRITTER, 
+				CREATEAT
+		FROM BOARD
+		ORDER BY BOARDNO DESC
+	</select>
+	
+	<!-- 게시글 작성 -->
+	<insert id="insertBoard" parameterType="testVo">
+		<selectKey keyProperty="boardNo" resultType="int" order="BEFORE">
+			SELECT BOARDNO_SEQ.NEXTVAL FROM DUAL
+		</selectKey>
+		INSERT INTO BOARD (
+							BOARDNO, 
+							TITLE, 
+							WRITTER, 
+							CONTENT, 
+							CREATEAT
+							)
+		VALUES (
+				#{boardNo, jdbcType=INTEGER}, 
+				#{title, jdbcType=VARCHAR}, 
+				#{writter, jdbcType=VARCHAR}, 
+				#{content, jdbcType=VARCHAR}, 
+				SYSDATE
+				)
+	</insert>
+	
+	<!-- 게시글 상세 조회 -->
+	<select id="detailBoard" resultType="testVo" parameterType="int">
+		SELECT  BOARDNO, 
+				TITLE, 
+				WRITTER, 
+				CONTENT
+		FROM BOARD
+		WHERE BOARDNO = #{boardNo}
+	</select>
+	
+	<!-- 게시글 삭제 -->
+	<delete id="deleteBoard" parameterType="int">
+		DELETE FROM BOARD
+		WHERE BOARDNO = #{boardNo}
+	</delete>
+	
+	<!-- 게시글 수정 GET -->
+	<select id="updateBoardGet" resultType="testVo" parameterType="int">
+		SELECT  BOARDNO, 
+				TITLE, 
+				WRITTER, 
+				CONTENT
+		FROM BOARD
+		WHERE BOARDNO = #{boardNo}
+	</select>
+	
+	<!-- 게시글 수정 POST -->
+	<update id="updateBoard" parameterType="testVo">
+		UPDATE BOARD
+		SET TITLE = #{title}, WRITTER = #{writter}, CONTENT = #{content}
+		WHERE BOARDNO = #{boardNo}
+	</update>
+</mapper>
